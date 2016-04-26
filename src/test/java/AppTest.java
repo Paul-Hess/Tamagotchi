@@ -48,4 +48,55 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Activity Level: 10");
   }
 
+  @Test public void newTamagotchiIncreaseFoodLevelTest() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("Luca");
+    submit("#nameBtn");
+    submit("#feed");
+    assertThat(pageSource()).contains("Food Level: 11");
+  }
+
+  @Test public void newTamagotchiIncreaseSleepLevelTest() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("Luca");
+    submit("#nameBtn");
+    submit("#sleep");
+    assertThat(pageSource()).contains("Sleep Level: 11");
+  }
+
+  @Test public void newTamagotchiIncreaseActivityLevelTest() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("Luca");
+    submit("#nameBtn");
+    submit("#activity");
+    assertThat(pageSource()).contains("Activity Level: 11");
+  }
+
+  @Test public void newTamagotchiSimulateTimePassesOnClick() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("Luca");
+    submit("#nameBtn");
+    submit("#time");
+    assertThat(pageSource()).contains("Food Level: 9");
+    assertThat(pageSource()).contains("Sleep Level: 9");
+    assertThat(pageSource()).contains("Activity Level: 9");
+  }
+
+  @Test public void newTamagotchiLetItDie() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("Luca");
+    submit("#nameBtn");
+    submit("#time");
+    submit("#time");
+    submit("#time");
+    submit("#time");
+    submit("#time");
+    submit("#time");
+    submit("#time");
+    submit("#time");
+    submit("#time");
+    submit("#time");
+    assertThat(pageSource()).contains("Tamagotchi is dead, you asshole.");
+  }
+
 }

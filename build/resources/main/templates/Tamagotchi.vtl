@@ -1,4 +1,24 @@
+#if($isAlive)
 <h3>Name: $newTamagotchi.getName()</h3>
 <p>Food Level: $newTamagotchi.getFoodLevel()</p>
 <p>Sleep Level: $newTamagotchi.getSleepLevel()</p>
 <p>Activity Level: $newTamagotchi.getActivityLevel()</p>
+
+<form action="/feed" method="post">
+  <button id="feed" class="btn btn-default" type="submit">Feed me!</button>
+</form>
+
+<form action="/sleep" method="post">
+  <button id="sleep" class="btn btn-default" type="submit">Put me to sleep!</button>
+</form>
+
+<form action="/activity" method="post">
+  <button id="activity" class="btn btn-default" type="submit">Play with me!</button>
+</form>
+
+<form action="/time" method="post">
+  <button id="time" class="btn btn-default" type="submit">Simulate time passing</button>
+</form>
+#else
+  <p>"Tamagotchi is dead, you asshole."</p>
+#end

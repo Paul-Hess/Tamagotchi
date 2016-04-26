@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TamagotchiTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-26T18:58:40" hostname="epicodus-42.local" time="0.001">
+<testsuite name="TamagotchiTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-26T21:03:28" hostname="epicodus-42.local" time="0.002">
   <properties/>
   <testcase name="getName_returnsNameCorrectly" classname="TamagotchiTest" time="0.0"/>
   <testcase name="getFoodLevel_instantiatesWithSleepLevel" classname="TamagotchiTest" time="0.0"/>
