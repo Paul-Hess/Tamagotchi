@@ -16,9 +16,36 @@ public class AppTest extends FluentTest {
   @ClassRule
   public static ServerRule server = new ServerRule();
 
-  // @Test public void rootTest() {
-  //   goTo("http://localhost:4567/");
-  //   assertThat(pageSource()).contains("");
-  // }
+  @Test public void rootTest() {
+    goTo("http://localhost:4567/");
+    assertThat(pageSource()).contains("Tamagotchi");
+  }
+  @Test public void newTamagotchiCreationTest() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("Luca");
+    submit("#nameBtn");
+    assertThat(pageSource()).contains("Luca");
+  }
+
+  @Test public void newTamagotchiFoodLevelTest() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("Luca");
+    submit("#nameBtn");
+    assertThat(pageSource()).contains("Food Level: 10");
+  }
+
+  @Test public void newTamagotchiSleepLevelTest() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("Luca");
+    submit("#nameBtn");
+    assertThat(pageSource()).contains("Sleep Level: 10");
+  }
+
+  @Test public void newTamagotchiActivityLevelTest() {
+    goTo("http://localhost:4567/");
+    fill("#name").with("Luca");
+    submit("#nameBtn");
+    assertThat(pageSource()).contains("Activity Level: 10");
+  }
 
 }

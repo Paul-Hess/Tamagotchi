@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TamagotchiTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-26T18:25:53" hostname="epicodus-42.local" time="0.01">
+<testsuite name="TamagotchiTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-26T18:58:40" hostname="epicodus-42.local" time="0.001">
   <properties/>
-  <testcase name="getName_returnsNameCorrectly" classname="TamagotchiTest" time="0.001"/>
+  <testcase name="getName_returnsNameCorrectly" classname="TamagotchiTest" time="0.0"/>
   <testcase name="getFoodLevel_instantiatesWithSleepLevel" classname="TamagotchiTest" time="0.0"/>
   <testcase name="checkHealthStatus_returnFalseifDead" classname="TamagotchiTest" time="0.0"/>
   <testcase name="timePasses_decreasesHealthLevelsAsTimePasses" classname="TamagotchiTest" time="0.0"/>
   <testcase name="checkHealthStatus_returnTrueIfAlive" classname="TamagotchiTest" time="0.0"/>
   <testcase name="newTamagotchi_instatiatesCorrectly" classname="TamagotchiTest" time="0.0"/>
-  <testcase name="getFoodLevel_instantiatesWithFoodLevel" classname="TamagotchiTest" time="0.002"/>
-  <testcase name="getFoodLevel_instantiatesWithActivityLevel" classname="TamagotchiTest" time="0.001"/>
-  <testcase name="increaseLevel_increaseLevelsCorrectly" classname="TamagotchiTest" time="0.002"/>
+  <testcase name="getFoodLevel_instantiatesWithFoodLevel" classname="TamagotchiTest" time="0.0"/>
+  <testcase name="getFoodLevel_instantiatesWithActivityLevel" classname="TamagotchiTest" time="0.0"/>
+  <testcase name="increaseLevel_increaseLevelsCorrectly" classname="TamagotchiTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
