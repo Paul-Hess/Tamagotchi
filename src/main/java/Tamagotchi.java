@@ -40,4 +40,18 @@ public class Tamagotchi {
     }
   }
 
+  public void timePasses() {
+    mFoodLevel--;
+    mSleepLevel--;
+    mActivityLevel--;
+  }
+
+  public boolean checkHealthStatus(){
+    if (mFoodLevel == 0 || mSleepLevel == 0 || mActivityLevel == 0){
+      return false;
+    } else {
+      return true;
+    }
+  }
+
 }

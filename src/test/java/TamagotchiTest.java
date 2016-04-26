@@ -45,4 +45,36 @@ public class TamagotchiTest {
     assertEquals(11, testTamagotchi.getActivityLevel());
   }
 
+  @Test
+  public void timePasses_decreasesHealthLevelsAsTimePasses() {
+    Tamagotchi testTamagotchi = new Tamagotchi("Luca");
+    testTamagotchi.timePasses();
+    assertEquals(9, testTamagotchi.getFoodLevel());
+    assertEquals(9, testTamagotchi.getSleepLevel());
+    assertEquals(9, testTamagotchi.getActivityLevel());
+  }
+
+  @Test
+  public void checkHealthStatus_returnTrueIfAlive(){
+    Tamagotchi testTamagotchi = new Tamagotchi("Luca");
+    assertEquals(true, testTamagotchi.checkHealthStatus());
+  }
+
+  @Test
+  public void checkHealthStatus_returnFalseifDead(){
+    Tamagotchi testTamagotchi = new Tamagotchi("Luca");
+    testTamagotchi.timePasses();
+    testTamagotchi.timePasses();
+    testTamagotchi.timePasses();
+    testTamagotchi.timePasses();
+    testTamagotchi.timePasses();
+    testTamagotchi.timePasses();
+    testTamagotchi.timePasses();
+    testTamagotchi.timePasses();
+    testTamagotchi.timePasses();
+    testTamagotchi.timePasses();
+    assertEquals(false, testTamagotchi.checkHealthStatus());
+  }
+
+
 }
